@@ -44,7 +44,7 @@ class ScreenOneController extends GetxController {
     gender = (box.read("gender") == "MALE") ? Gender.MALE : Gender.FEMALE;
     emaild = box.read("emailid");
     imagePath = box.read("imagePath");
-    if (name != null && gender != null && emaild != null && imagePath != null) {
+    if (name != null && gender != null && emaild != null) {
       toShowBelowSubmit = """
     DATA
     NAME : $name 
