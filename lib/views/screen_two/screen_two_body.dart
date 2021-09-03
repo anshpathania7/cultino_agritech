@@ -29,7 +29,7 @@ class ScreenTwoBody extends StatelessWidget {
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           OctoImage(
                             image: NetworkImage(
@@ -39,13 +39,15 @@ class ScreenTwoBody extends StatelessWidget {
                             width: 125,
                             fit: BoxFit.contain,
                           ),
-                          Text("""
-                            District : ${controller.data.otherMandi?[i]?.district}
-                            Hindi Name : ${controller.data.otherMandi?[i]?.hindiName}
-                            Kilometer : ${controller.data.otherMandi?[i]?.km}
-                            Ladt date : ${controller.data.otherMandi?[i]?.lastDate}
-                            Market : ${controller.data.otherMandi?[i]?.market}
-                            """),
+                          Flexible(
+                            child: Text("""
+                              District : ${controller.data.otherMandi?[i]?.district}
+                              Name : ${controller.data.otherMandi?[i]?.hindiName}
+                              Kilometer : ${controller.data.otherMandi?[i]?.km}
+                              Ladt date : ${controller.data.otherMandi?[i]?.lastDate}
+                              Market : ${controller.data.otherMandi?[i]?.market}
+                              """),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 20),
